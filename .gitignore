@@ -15,5 +15,8 @@ RealSpaceInterface/cache/
 doc/manual/html
 doc/manual/latex
 .github/workflows
+<<<<<<< HEAD
 .git/
 
+=======
+>>>>>>> dfc4ffa7db27b70128023d61d7eaf358f814099b
