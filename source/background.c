@@ -407,6 +407,15 @@ int background_functions(
 
   /** - initialize local variables */
   rho_tot = 0.;
+  /* RGH: Theta component - actif seulement à très bas z */
+  double rho_theta = 0.0;
+  if (a > 1e-2) {  // z < 99
+    rho_theta = pba->alpha_W * pow(pba->H0, 2) / pow(a, 2);
+  }
+  rho_tot += rho_theta;
+  p_tot += 0.0;
+  dp_dloga += -3.0 * rho_theta;
+  rho_m += rho_theta;
   p_tot = 0.;
   dp_dloga = 0.;
   rho_r=0.;
@@ -1053,6 +1062,9 @@ int background_indices(
   /* - indices for ncdm. We only define the indices for ncdm1
      (density, pressure, pseudo-pressure), the other ncdm indices
      are contiguous */
+  /* RGH: Theta */
+  class_define_index(pba->index_bg_rho_theta,_TRUE_,index_bg,1);
+  class_define_index(pba->index_bg_Omega_theta,_TRUE_,index_bg,1);
   class_define_index(pba->index_bg_rho_ncdm1,pba->has_ncdm,index_bg,pba->N_ncdm);
   class_define_index(pba->index_bg_p_ncdm1,pba->has_ncdm,index_bg,pba->N_ncdm);
   class_define_index(pba->index_bg_pseudo_p_ncdm1,pba->has_ncdm,index_bg,pba->N_ncdm);
