@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH/class_env'
+VIRTUAL_ENV='/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH_github/class_env'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

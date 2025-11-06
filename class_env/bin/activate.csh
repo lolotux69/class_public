@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV '/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH/class_env'
+setenv VIRTUAL_ENV '/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH_github/class_env'
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
