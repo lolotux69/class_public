@@ -1,80 +1,138 @@
-# CLASS + RGH Model
 
-**Modèle cosmologique RGH (Relativité Générale Holographique)**  
-Ajout d'une nouvelle composante d'énergie :  
-**`ρ_θ = α_W × H₀² / a²`**  
-→ Active **uniquement pour `z < 99`**
+# Relativité Générale Hypercomplexe (RGH) – Extension de CLASS
 
----
+## 🪐 Présentation
 
-## Caractéristiques
+Ce dépôt contient une version modifiée du code cosmologique **CLASS** (Cosmic Linear Anisotropy Solving System), intégrant la **Relativité Générale Hypercomplexe (RGH)** — une extension quaternionique de la Relativité Générale (RG) proposée par *Laurent Besson (Lolo)*.
 
-| Propriété | Valeur |
-|---------|--------|
-| `α_W` | `0.1` |
-| Activation | `z < 99` (`a > 0.01`) |
-| Effet sur CMB (TT, EE) | **Aucun** (compatible Planck) |
-| Effet sur P(k) | **Pic plus haut + décalé vers k ≈ 0.03 h/Mpc** |
-| Croissance des structures | **Augmentée à petite échelle** |
+Cette approche introduit des composantes hypercomplexes dans le tenseur métrique et explore leurs effets potentiels sur :
+- le spectre de puissance linéaire $P(k)$,
+- les anisotropies du CMB ($C_\ell^{TT}$),
+- les corrections cosmologiques à grande échelle.
+
+Le code permet de comparer directement les modèles **RGH** et **ΛCDM** dans le cadre du formalisme de CLASS.
 
 ---
 
-## Fichiers inclus
+## 📦 Structure du dépôt
 
-- `mon_modele_RGH.ini` → Paramètres du modèle
-- `source/background.c` → Implémentation de `ρ_θ`
-- `source/input.c` → Lecture de `α_W`
-- `include/constants.h` → Constantes physiques
-- `plot_pk.py` → Plot P(k) vs ΛCDM
-- `plot_cl.py` → Plot C_ℓ (TT, EE) vs ΛCDM
+```
+
+class_public/
+├── source/              # Fichiers C principaux (CLASS)
+├── include/             # En-têtes modifiés pour RGH
+├── output/              # Résultats des calculs (P(k), C_l, etc.)
+├── mon_modele_*.ini     # Fichiers de configuration RGH et LCDM
+├── plot_pk.py           # Tracé du spectre de puissance
+├── plot_all_clTT.py     # Tracé du spectre CMB TT
+├── plot_all_pk_diff.py  # Comparaison RGH vs ΛCDM sur P(k)
+├── entete-a-mettre.txt  # En-tête standard Python (config Matplotlib)
+└── README.md            # Ce document
+
+````
 
 ---
 
-## Installation
+## ⚙️ Installation et environnement
+
+### 1. Création de l’environnement virtuel
 
 ```bash
-make clean && make
-
-## Lancer le modèle
-bash./class mon_modele_RGH.ini
-
-## → Génère :
-
-output/mon_modele_RGH00_pk.dat
-output/mon_modele_RGH00_cl_lensed.dat
-
-
-## Plots
-bash# Dans un venv avec matplotlib
 python3 -m venv class_env
 source class_env/bin/activate
-pip install matplotlib numpy
+pip install --upgrade pip
+pip install numpy matplotlib PyQt5
+````
+
+### 2. Compilation de CLASS
+
+```bash
+make clean
+make
+```
+
+---
+
+## 🚀 Utilisation
+
+### Générer les spectres pour chaque modèle :
+
+```bash
+./class mon_modele_LCDM.ini
+./class mon_modele_RGH.ini
+./class mon_modele_RGH-02.ini
+```
+
+Les fichiers produits seront disponibles dans le dossier `output/`.
+
+---
+
+## 📊 Visualisation
+
+### 1. Spectre de puissance P(k)
+
+```bash
 python3 plot_pk.py
-python3 plot_cl.py
+python3 plot_all_pk_diff.py
+```
 
-## → Génère :
+### 2. Spectre CMB TT
 
-CMB_EE_RGH.png
-CMB_TT_all.png
-CMB_TT_diff.png
-CMB_TT_RGH.png
-P_k_all.png
-P_k_diff.png
-P_k_RGH.png
-P_k_RGH_vs_LCDM.png  ![CMB_TT_RGH](CMB_TT_RGH.png)
-![CMB_EE_RGH](CMB_EE_RGH.png)
-![P_k_RGH](P_k_RGH.png)
-![CMB_TT_all](CMB_TT_all.png)
-![CMB_TT_diff](CMB_TT_diff.png)
-![P_k_all](P_k_all.png)
-![P_k_diff](P_k_diff.png)
-![P_k_RGH_vs_LCDM](P_k_RGH_vs_LCDM.png) 
+```bash
+python3 plot_all_clTT.py
+```
 
+Chaque script produit une image `.png` dans `output/`.
 
-Auteur
-Laurent (lolotux69)
-Novembre 2025
+---
 
+## 🧠 À propos du modèle RGH
 
-Modèle testable avec SDSS, DESI, Euclid
-Prêt pour publication
+* **Idée principale :** remplacer les coordonnées réelles du quadrivecteur par des composantes quaternions hypercomplexes.
+* **Objectif :** explorer une extension naturelle de la métrique d’Einstein permettant d’unifier certains effets de jauge et de torsion.
+
+### 🔗 Références :
+
+* [HAL : Relativité Générale Hypercomplexe – Besson, Rahbé (2025)](https://hal.science/view/index/docid/5342486)
+* [Zenodo Record](https://zenodo.org/records/17535167)
+* [Blog de l’auteur](https://monblog.system-linux.fr/RGH-with-grok/)
+
+---
+
+## 🧩 Exemple de comparaison (visuel)
+
+* `P(k)` : spectre de puissance RGH vs ΛCDM
+* `ΔP(k)/P(k)` : différence relative
+* `C_ℓ^{TT}` : anisotropies du CMB lissé
+
+Ces sorties permettent de tester la sensibilité cosmologique de la RGH sur les grandes structures.
+
+---
+
+## 🧪 Reproductibilité
+
+Toutes les simulations ont été effectuées sur :
+
+* **Debian 12 (Bookworm)**
+* **Python 3.11**
+* **Matplotlib ≥ 3.10**
+* **CLASS modifié RGH branché sur master**
+
+Les fichiers `.ini` sont compatibles avec CLASS standard, seules les sections RGH ajoutent des paramètres supplémentaires (`alpha_W`, etc.).
+
+---
+
+## 🧾 Licence
+
+Ce travail est distribué sous licence **GPLv3**, conformément à CLASS.
+
+> © 1998–2025 Laurent Besson (Lolo)
+> Inspiré du travail collaboratif avec Grok 4.1.2 et GPT-5.
+
+---
+
+## ☕ Contact
+
+* **Auteur :** Laurent Besson
+* **Lieu :** Lyon, France
+* **Blog :** [monblog.system-linux.fr](https://monblog.system-linux.fr)
