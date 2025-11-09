@@ -1,0 +1,11 @@
+make clean && make > log.txt 2>&1 && ./class mon_modele_RGH-02.ini
+# 1. Crée un environnement virtuel
+python3 -m venv class_env
+# 2. Active-le
+source class_env/bin/activate
+# 3. Installe matplotlib et numpy
+pip install matplotlib numpy
+# 4. Lance le plot
+python3 plot_pk.py
+gwenview P_k_RGH.png
+cat plot_pk.py

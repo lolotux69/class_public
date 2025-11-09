@@ -1,8 +1,7 @@
-#!/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH/class_env/bin/python3
-# -*- coding: utf-8 -*-
-import re
+#!/media/lolo/Big-Disk-03/Partage/PDF/Sciences/Relativité/RGH/Grok-4.1.2-RGH/class_RGH_github/class_env/bin/python3
 import sys
 from fontTools.merge import main
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
     sys.exit(main())
