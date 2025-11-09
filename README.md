@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="RGH.png" alt="RGH Logo" width="100"/>
+  <img src="docs/img/RGH.png" alt="RGH Logo" width="100"/>
 </p>
 
 <h1 align="center">Relativité Générale Hypercomplexe (RGH)</h1>
@@ -158,4 +158,11 @@ Ce travail est distribué sous licence **GPLv3**, conformément à CLASS.
 
 * **Auteur :** Laurent Besson
 * **Lieu :** Lyon, France
+* **Blog :** [monblog.system-linux.fr](https://monblog.system-linux.fr)  ## 📚 Citer ce dépôt
+Si vous utilisez RGH, merci de citer :
+
+* **Auteur :** Laurent Besson
+* **Lieu :** Lyon, France
 * **Blog :** [monblog.system-linux.fr](https://monblog.system-linux.fr)
+
+
