@@ -158,7 +158,7 @@ Ce travail est distribué sous licence **GPLv3**, conformément à CLASS.
 
 * **Auteur :** Laurent Besson
 * **Lieu :** Lyon, France
-* **Blog :** [monblog.system-linux.fr](https://monblog.system-linux.fr)  ## 📚 Citer ce dépôt
+* **Blog :** [monblog.system-linux.fr](https://monblog.system-linux.fr)  ---  ## 📚 Citer ce dépôt
 Si vous utilisez RGH, merci de citer :
 
 * **Auteur :** Laurent Besson
