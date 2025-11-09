@@ -63,7 +63,7 @@ make
 ./class mon_modele_RGH-02.ini
 ```
 
-Les fichiers produits seront disponibles dans le dossier `output/`.
+Chaque script produit une image .png dans le répertoire courant (par défaut, le dossier racine du projet).
 
 ---
 
