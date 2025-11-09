@@ -1,3 +1,27 @@
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Relativity_icon.svg" alt="RGH Logo" width="100"/>
+</p>
+
+<h1 align="center">Relativité Générale Hypercomplexe (RGH)</h1>
+<h3 align="center">Extension quaternionique du code cosmologique CLASS</h3>
+
+<p align="center">
+  <a href="https://hal.science/view/index/docid/5342486">
+    <img src="https://img.shields.io/badge/HAL-5354645-blue?logo=hal" alt="HAL record">
+  </a>
+  <a href="https://zenodo.org/records/17535167">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17535167.svg" alt="DOI Zenodo">
+  </a>
+  <a href="https://monblog.system-linux.fr/RGH-with-grok/">
+    <img src="https://img.shields.io/badge/Blog-RGH--with--Grok-orange?logo=blogger" alt="Blog RGH">
+  </a>
+  <a href="https://github.com/lolotux69/class_public">
+    <img src="https://img.shields.io/badge/GitHub-class__public-black?logo=github" alt="GitHub">
+  </a>
+</p>
+
+---
+
 
 # Relativité Générale Hypercomplexe (RGH) – Extension de CLASS
 
