@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/120px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg" alt="RGH Logo" width="100"/>
+  <img src="RGH.png" alt="RGH Logo" width="100"/>
 </p>
 
 <h1 align="center">Relativité Générale Hypercomplexe (RGH)</h1>
