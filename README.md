@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/img/RGH.png" alt="RGH Logo" width="100"/>
+  <img src="RGH.png" alt="RGH Logo" width="100"/>
 </p>
 
 <h1 align="center">Relativité Générale Hypercomplexe (RGH)</h1>
