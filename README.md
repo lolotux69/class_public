@@ -54,9 +54,21 @@ python3 plot_cl.py
 
 ## → Génère :
 
-P_k_RGH.png
-CMB_TT_RGH.png
 CMB_EE_RGH.png
+CMB_TT_all.png
+CMB_TT_diff.png
+CMB_TT_RGH.png
+P_k_all.png
+P_k_diff.png
+P_k_RGH.png
+P_k_RGH_vs_LCDM.png  ![CMB_TT_RGH](CMB_TT_RGH.png)
+![CMB_EE_RGH](CMB_EE_RGH.png)
+![P_k_RGH](P_k_RGH.png)
+![CMB_TT_all](CMB_TT_all.png)
+![CMB_TT_diff](CMB_TT_diff.png)
+![P_k_all](P_k_all.png)
+![P_k_diff](P_k_diff.png)
+![P_k_RGH_vs_LCDM](P_k_RGH_vs_LCDM.png) 
 
 
 Auteur
